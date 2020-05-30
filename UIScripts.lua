@@ -96,11 +96,11 @@ end)
 ------------------------------------------------
 -- Move buffs & debuffs
 ------------------------------------------------
-hooksecurefunc("UIParent_UpdateTopFramePositions",
+hooksecurefunc("UIParent_UpdateTopFramePositions", function()
     BuffFrame:ClearAllPoints()
     BuffFrame:SetScale(1.1)
     BuffFrame:SetPoint("CENTER",PlayerFrame,"CENTER",560,450)
-)
+end)
 
 -- old
 -- function Movebuff() 
