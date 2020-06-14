@@ -13,6 +13,27 @@
 
 MainMenuBarArtFrameBackground:Hide()
 MainMenuBarArtFrame.PageNumber:Hide()
+
+MicroButtonAndBagsBar.MicroBagBar:Hide()
+-- MicroButtonAndBagsBar:ClearAllPoints() 
+-- MicroButtonAndBagsBar:SetPoint("CENTER",200,50) MicroButtonAndBagsBar.SetPoint = function() end
+
+CharacterBag0Slot:Hide()
+CharacterBag0Slot.IconBorder:Hide()
+CharacterBag0SlotIconTexture:Hide()
+
+CharacterBag1Slot:Hide()
+CharacterBag1Slot.IconBorder:Hide()
+CharacterBag1SlotIconTexture:Hide()
+
+CharacterBag2Slot:Hide()
+CharacterBag2Slot.IconBorder:Hide()
+CharacterBag2SlotIconTexture:Hide()
+
+CharacterBag3Slot:Hide()
+CharacterBag3Slot.IconBorder:Hide()
+CharacterBag3SlotIconTexture:Hide()
+
 ActionBarUpButton:SetAlpha(0)
 ActionBarDownButton:SetAlpha(0)
 
@@ -24,12 +45,12 @@ MainMenuBarArtFrameBackground:ClearAllPoints()
 MainMenuBarArtFrameBackground:SetPoint("CENTER",23,-23) MainMenuBarArtFrameBackground.SetPoint = function() end
 
 -- Hide Target Castbar
-SetCVar("showTargetCastbar", 0)
+SetCVar("showTargetCastbar", 1)
 
 -- Move Player Castbar
--- CastingBarFrame:ClearAllPoints()
--- CastingBarFrame:SetPoint("TOP", WorldFrame, "CENTER", 0, -350)
--- CastingBarFrame.SetPoint = function() end
+CastingBarFrame:ClearAllPoints()
+CastingBarFrame:SetPoint("TOP", WorldFrame, "CENTER", 0, -250)
+CastingBarFrame.SetPoint = function() end
 
 ------------------------------------------------
 -- Dispellable debuffs
@@ -81,26 +102,26 @@ end)
 -- Focus Cast Bar
 hooksecurefunc(FocusFrameSpellBar, "Show", function()
     FocusFrameSpellBar:ClearAllPoints()
-    FocusFrameSpellBar:SetPoint("CENTER", UIParent, "CENTER", 25, -100)
+    FocusFrameSpellBar:SetPoint("CENTER", UIParent, "CENTER", 0, -100)
     FocusFrameSpellBar:SetScale(1.5)
     FocusFrameSpellBar.SetPoint = function() end
 end)
 
 -- Target Cast Bar
-hooksecurefunc(CastingBarFrame, "Show", function()
-    CastingBarFrame:ClearAllPoints()
-    CastingBarFrame:SetPoint("CENTER", UIParent, "CENTER", 0, -310)
-    CastingBarFrame.SetPoint = function() end
-end)
+-- hooksecurefunc(CastingBarFrame, "Show", function()
+--     CastingBarFrame:ClearAllPoints()
+--     CastingBarFrame:SetPoint("CENTER", UIParent, "CENTER", 0, -310)
+--     CastingBarFrame.SetPoint = function() end
+-- end)
 
 ------------------------------------------------
 -- Move buffs & debuffs
 ------------------------------------------------
-hooksecurefunc("UIParent_UpdateTopFramePositions", function()
-    BuffFrame:ClearAllPoints()
-    BuffFrame:SetScale(1.1)
-    BuffFrame:SetPoint("CENTER",PlayerFrame,"CENTER",560,450)
-end)
+-- hooksecurefunc("UIParent_UpdateTopFramePositions", function()
+--     BuffFrame:ClearAllPoints()
+--     BuffFrame:SetScale(1.1)
+--     BuffFrame:SetPoint("CENTER",PlayerFrame,"CENTER",500,450)
+-- end)
 
 -- old
 -- function Movebuff() 
