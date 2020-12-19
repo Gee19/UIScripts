@@ -1,3 +1,3 @@
-## Interface: 70300
+## Interface: 90002
 ## Title: UIScripts
 UIScripts.lua
